@@ -1,0 +1,57 @@
+/* pages/index/index.wxss */
+/* 首页 */
+.container {
+  width: 100vw;
+  height: calc(100vh - 168rpx);
+}
+
+.con-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.con-swiper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+swiper {
+  /* width: 478rpx; */
+  width: 100%;
+  height: 700rpx;
+}
+swiper-item{
+  text-align: center;	
+}
+
+.swiper-img {
+  margin: 0 auto;
+  height: calc(100% - 5px);
+  width: 478rpx;
+  box-shadow: 5px 5px 5px rgb(184, 182, 182);
+}
+.swiper-img image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 我的 */
+.person{
+  width: 100vw;
+  height: 20vh;
+}
+.person_btn{
+  text-align: center;
+  line-height: 20vh;
+}
+
+.outer>view {
+  margin-bottom: 20rpx;
+}

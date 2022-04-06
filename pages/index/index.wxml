@@ -1,0 +1,60 @@
+<view class="container" hidden="{{active === 0 ?false:true }}">
+  <view class="con-swiper">
+    <swiper autoplay="true" circular="true" current="{{currentSwiper}}" bindchange="swiperChange" bindanimationfinish="animationChange">
+      <block wx:for="{{img_index}}" wx:key="index">
+        <swiper-item>
+          <view class="swiper-img">
+            <image src="../../assets/img/index/{{index+1}}.jpg" bindtap="swiperClick"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <image class="con-img" src="../../assets/img/bgc.jpg"></image>
+</view>
+
+<view hidden="{{active === 1 ?false:true }}">
+  123
+</view>
+
+<view hidden="{{active === 2 ?false:true }}">
+  789
+</view>
+
+<view hidden="{{active === 3 ?false:true }}" class="outer">
+  <view class="person">
+    <view class="person_btn">
+      <van-button type="primary">点击登录</van-button>
+    </view>
+  </view>
+
+  <view>
+    <van-cell-group>
+      <van-cell title="广场" is-link icon="friends"  size="large" />
+      <van-cell icon="column" title="管理我的广场" is-link size="large" />
+    </van-cell-group>
+  </view>
+
+  <view>
+    <van-cell-group>
+      <van-cell icon="browsing-history" title="浏览历史" is-link size="large" />
+      <van-cell icon="replay" title="清除缓存" is-link size="large"/>
+    </van-cell-group>
+  </view>
+
+  <view>
+    <van-cell-group>
+      <van-cell icon="comment-o" title="评论我们"  is-link size="large"/>
+      <van-cell icon="weapp-nav" title="关于我们"  is-link size="large"/>
+    </van-cell-group>
+  </view>
+  
+</view>
+
+<van-tabbar active="{{ active }}" bind:change="onChange" safe-area-inset-bottom="false">
+  <van-tabbar-item icon="home-o">主页</van-tabbar-item>
+  <van-tabbar-item icon="search">答题</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">封神榜</van-tabbar-item>
+  <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+</van-tabbar>
+<!-- <web-view name="nrd_studio_embed" frameborder="0" style="display:block;width:500px; height:300px;" src="https://nrdstudio.cn/view/link/1e4d5af9de90638c82ca650b7f912bd8" /> -->
