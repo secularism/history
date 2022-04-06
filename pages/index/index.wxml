@@ -55,6 +55,6 @@
   <van-tabbar-item icon="home-o">主页</van-tabbar-item>
   <van-tabbar-item icon="search">答题</van-tabbar-item>
   <van-tabbar-item icon="friends-o">封神榜</van-tabbar-item>
-  <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+  <van-tabbar-item icon="user-o">hhh</van-tabbar-item>
 </van-tabbar>
 <!-- <web-view name="nrd_studio_embed" frameborder="0" style="display:block;width:500px; height:300px;" src="https://nrdstudio.cn/view/link/1e4d5af9de90638c82ca650b7f912bd8" /> -->
