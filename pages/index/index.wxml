@@ -10,6 +10,16 @@
       </block>
     </swiper>
   </view>
+  <van-popup closeable show="{{ show }}" round position="bottom" custom-style="height: 20%" bind:close="onClose">
+    <view class="view_popup">
+      <view>
+        <van-button class="btn_popup" hairline plain type="primary" >时间线</van-button>
+      </view>
+      <view>
+        <van-button class="btn_popup" hairline plain type="primary" bindtap="toDetail_hero">人物线</van-button>
+      </view>
+    </view>
+  </van-popup>
   <image class="con-img" src="../../assets/img/bgc.jpg"></image>
 </view>
 
@@ -30,7 +40,7 @@
 
   <view>
     <van-cell-group>
-      <van-cell title="广场" is-link icon="friends"  size="large" />
+      <van-cell title="广场" is-link icon="friends" size="large" />
       <van-cell icon="column" title="管理我的广场" is-link size="large" />
     </van-cell-group>
   </view>
@@ -38,23 +48,22 @@
   <view>
     <van-cell-group>
       <van-cell icon="browsing-history" title="浏览历史" is-link size="large" />
-      <van-cell icon="replay" title="清除缓存" is-link size="large"/>
+      <van-cell icon="replay" title="清除缓存" is-link size="large" />
     </van-cell-group>
   </view>
 
   <view>
     <van-cell-group>
-      <van-cell icon="comment-o" title="评论我们"  is-link size="large"/>
-      <van-cell icon="weapp-nav" title="关于我们"  is-link size="large"/>
+      <van-cell icon="comment-o" title="评论我们" is-link size="large" />
+      <van-cell icon="weapp-nav" title="关于我们" is-link size="large" />
     </van-cell-group>
   </view>
-  
+
 </view>
 
 <van-tabbar active="{{ active }}" bind:change="onChange" safe-area-inset-bottom="false">
   <van-tabbar-item icon="home-o">主页</van-tabbar-item>
   <van-tabbar-item icon="search">答题</van-tabbar-item>
   <van-tabbar-item icon="friends-o">封神榜</van-tabbar-item>
-  <van-tabbar-item icon="user-o">hhh</van-tabbar-item>
+  <van-tabbar-item icon="user-o">个人中心</van-tabbar-item>
 </van-tabbar>
-<!-- <web-view name="nrd_studio_embed" frameborder="0" style="display:block;width:500px; height:300px;" src="https://nrdstudio.cn/view/link/1e4d5af9de90638c82ca650b7f912bd8" /> -->

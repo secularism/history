@@ -1,6 +1,9 @@
 // app.js
-
+import { colorUI } from './config/ColorUI'
+import { colorUISdk } from './config/mp-sdk'
 App({
+  colorUI,
+  colorUISdk,
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []

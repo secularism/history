@@ -55,3 +55,20 @@ swiper-item{
 .outer>view {
   margin-bottom: 20rpx;
 }
+
+.view_popup{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.view_popup view:last-child{
+  margin-top: 6rpx; 
+}
+.btn_popup button{
+  display: inline-block;
+  width: 300rpx;
+  line-height: 88rpx;
+}
