@@ -13,7 +13,7 @@
   <van-popup closeable show="{{ show }}" round position="bottom" custom-style="height: 20%" bind:close="onClose">
     <view class="view_popup">
       <view>
-        <van-button class="btn_popup" hairline plain type="primary" >时间线</van-button>
+        <van-button class="btn_popup" hairline plain type="primary">时间线</van-button>
       </view>
       <view>
         <van-button class="btn_popup" hairline plain type="primary" bindtap="toDetail_hero">人物线</van-button>
@@ -23,8 +23,21 @@
   <image class="con-img" src="../../assets/img/bgc.jpg"></image>
 </view>
 
-<view hidden="{{active === 1 ?false:true }}">
-  123
+<view hidden="{{active === 1 ?false:true }}" class="container">
+  <view class="question">
+    <view class="question_cat">
+      <view>
+        <text>人物类</text>
+      </view>
+      <view>
+        <text>朝代类</text>
+      </view>
+      <view>
+        <text>大乱斗</text>
+      </view>
+    </view>
+  </view>
+  <image class="con-img" src="../../assets/img/bgc.jpg"></image>
 </view>
 
 <view hidden="{{active === 2 ?false:true }}">
@@ -33,8 +46,15 @@
 
 <view hidden="{{active === 3 ?false:true }}" class="outer">
   <view class="person">
-    <view class="person_btn">
-      <van-button type="primary">点击登录</van-button>
+    <view class="info" wx:if="{{IsLogin}}">
+      <van-image class="person_image" round width="5rem" height="5rem" src="{{userInfo.avatarUrl}}" />
+      <view class="person_information">
+        <view>昵称：{{userInfo.nickName}}</view>
+        <view>简介：暂无简介</view>
+      </view>
+    </view>
+    <view wx:else class="person_btn">
+      <van-button type="primary" bindtap="getUserProfile">点击登录</van-button>
     </view>
   </view>
 
@@ -58,7 +78,7 @@
       <van-cell icon="weapp-nav" title="关于我们" is-link size="large" />
     </van-cell-group>
   </view>
-
+  <van-button wx:if="{{IsLogin}}" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="large" bindtap="loginOut">退出登录</van-button>
 </view>
 
 <van-tabbar active="{{ active }}" bind:change="onChange" safe-area-inset-bottom="false">

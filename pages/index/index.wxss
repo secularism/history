@@ -41,11 +41,49 @@ swiper-item{
   width: 100%;
   height: 100%;
 }
-
+/* 答题 */
+.question_cat{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.question{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.question_cat>view{
+  background-color: #e9e3e3;
+  width: 200rpx;
+  height: 400rpx;
+  text-align: center;
+  border-radius: 5%;
+}
+.question_cat>view text{
+  font-size: 50rpx;
+  
+  writing-mode:vertical-lr;
+  display: inline-block;
+  height: 100%;
+}
 /* 我的 */
 .person{
   width: 100vw;
   height: 20vh;
+}
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+.person_information{
+  display: flex;
+  flex-direction: column;
 }
 .person_btn{
   text-align: center;
