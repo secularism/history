@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/toDetail/toDetail"
+    "pages/toDetail/toDetail",
+    "pages/question/question"
   ],
   "window": {
     "backgroundTextStyle": "light",

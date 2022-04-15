@@ -64,7 +64,7 @@ swiper-item{
 }
 .question_cat>view text{
   font-size: 50rpx;
-  
+  font-family: '宋体';
   writing-mode:vertical-lr;
   display: inline-block;
   height: 100%;

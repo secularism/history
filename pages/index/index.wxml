@@ -26,7 +26,7 @@
 <view hidden="{{active === 1 ?false:true }}" class="container">
   <view class="question">
     <view class="question_cat">
-      <view>
+      <view bindtap="goQuestion">
         <text>人物类</text>
       </view>
       <view>

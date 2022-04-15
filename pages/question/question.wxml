@@ -1,0 +1,30 @@
+<!--pages/question/question/question.wxml-->
+<view class="page container">
+  <view>
+    <view class="top">
+      <view>{{currentId+1}}/5</view>
+    </view>
+    <view class="container">
+      <view class="question">
+        <text>{{currentQuestion.question}}</text>
+        <image wx:if="{{currentQuestion.imgUrl}}" src="{{currentQuestion.imgUrl}}"></image>
+      </view>
+      <view class="option">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <radio wx:for-items="{{currentQuestion.answer}}" wx:key="name" value="{{item.name}}" class="radio {{item.checked==true?'radio-checked':'radio-not-checked'}} {{item.isCorrect==true?'radio-right':'radio-wrong'}}" checked="{{item.checked}}" disabled="{{currentQuestion.selected}}">
+            <text style="color:{{text_color}}">{{item.name}}</text>
+          </radio>
+        </radio-group>
+        <view class="button">
+          <van-button round type="info" color="LightGreen" bindtap="lastQuestion">上一题</van-button>
+          <van-button round type="info" color="LightGreen" bindtap="nextQuestion">下一题</van-button>
+        </view>
+      </view>
+      <view class="answer" wx:if="{{currentQuestion.selected}}">
+        <view>正确答案：{{currentQuestion.right_answer}}</view>
+        <view>{{currentQuestion.answer_analysis}}</view>
+      </view>
+    </view>
+  </view>
+  <image class="con-img" src="../../assets/img/bgc.jpg"></image>
+</view>

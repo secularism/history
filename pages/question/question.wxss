@@ -1,0 +1,92 @@
+/* pages/question/question/question.wxss */
+
+.page{
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9f9;
+  height: 100vh;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50rpx;
+  background-color: #f9f9f9f9;
+  
+}
+.top image{
+  height: 50rpx;
+  width: 50rpx;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: auto auto;
+  background-color: white;
+  width: 700rpx;
+  box-shadow:0px 2px 4px 4px #dddddd; 
+
+}
+.option{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: white;
+  width: 700rpx;
+}
+.question{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 700rpx;
+  margin: 10rpx auto;
+  background-color: white;
+  border-radius: 5rpx;
+  /* box-shadow:0px 2px 4px 4px #dddddd;  */
+}
+.question>text{
+  width: 75%;
+  margin: 20rpx auto;
+}
+.question>image{
+  width: 550rpx;
+  height: 400rpx;
+  border-radius: 5px;
+  margin: auto auto;
+}
+.radio-group{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-left: 70rpx;
+  
+}
+.radio{
+  margin-top: 20rpx;
+  content: "x";
+}
+.radio-right text{
+  color: green;
+}
+.radio-wrong text{
+  color: red;
+}
+
+.radio-not-checked text{
+  color: black;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20rpx;
+}
+.button>van-button{
+  margin: 30rpx;
+}
+.answer{
+  /* width: 700rpx; */
+  margin-left: 80rpx;
+}

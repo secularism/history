@@ -156,4 +156,7 @@ Page({
       }
     })
   },
+  goQuestion(event){
+    console.log(event);
+  }
 })
