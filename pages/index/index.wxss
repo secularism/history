@@ -3,6 +3,7 @@
 .container {
   width: 100vw;
   height: calc(100vh - 168rpx);
+  position: relative;
 }
 
 .con-img {
@@ -15,65 +16,97 @@
   opacity: 0.4;
 }
 
-.con-swiper{
+.con-swiper {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-swiper {
-  /* width: 478rpx; */
-  width: 100%;
-  height: 700rpx;
-}
-swiper-item{
-  text-align: center;	
-}
-
-.swiper-img {
-  margin: 0 auto;
-  height: calc(100% - 5px);
-  width: 478rpx;
-  box-shadow: 5px 5px 5px rgb(184, 182, 182);
-}
-.swiper-img image{
-  width: 100%;
+.con-swiper swiper{
+  flex: 1;  
   height: 100%;
 }
+swiper-item{
+  align-items: center;
+  display: flex;
+}
+
+.swiper-info{
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.swiper-info view{
+  width: 50%;
+}
+.swiper-img{
+  font-size: 0;
+  text-align: center;
+}
+.swiper-time{
+  display: flex;
+  align-items: center;
+}
+.swiper-time text{
+  display: inline-block;
+  width: 100%;
+  font-weight: 400;
+  font-family: '宋体';
+  font-size: 40rpx;
+  text-align: center;
+}
+.swiper-img image{
+  width: 85%;
+  padding: 0 16rpx;
+}
+.test{
+  width: 2px;
+  height: 100%;
+  border-right: solid black 1px;
+  position: absolute;
+  left: calc(50% - 2px);
+}
+
 /* 答题 */
-.question_cat{
+.question_cat {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   margin-top: auto;
   margin-bottom: auto;
 }
-.question{
+
+.question {
   width: 100%;
   height: 100%;
   align-items: center;
   display: flex;
 }
-.question_cat>view{
+
+.question_cat>view {
   background-color: #e9e3e3;
   width: 200rpx;
   height: 400rpx;
   text-align: center;
   border-radius: 5%;
 }
-.question_cat>view text{
+
+.question_cat>view text {
   font-size: 50rpx;
   font-family: '宋体';
-  writing-mode:vertical-lr;
+  writing-mode: vertical-lr;
   display: inline-block;
   height: 100%;
 }
+
 /* 我的 */
-.person{
+.person {
   width: 100vw;
   height: 20vh;
 }
+
 .info {
   display: flex;
   justify-content: space-evenly;
@@ -81,11 +114,13 @@ swiper-item{
   height: 100%;
   margin: 0 auto;
 }
-.person_information{
+
+.person_information {
   display: flex;
   flex-direction: column;
 }
-.person_btn{
+
+.person_btn {
   text-align: center;
   line-height: 20vh;
 }
@@ -94,7 +129,7 @@ swiper-item{
   margin-bottom: 20rpx;
 }
 
-.view_popup{
+.view_popup {
   width: 100%;
   height: 100%;
   display: flex;
@@ -102,10 +137,12 @@ swiper-item{
   justify-content: center;
   align-items: center;
 }
-.view_popup view:last-child{
-  margin-top: 6rpx; 
+
+.view_popup view:last-child {
+  margin-top: 6rpx;
 }
-.btn_popup button{
+
+.btn_popup button {
   display: inline-block;
   width: 300rpx;
   line-height: 88rpx;

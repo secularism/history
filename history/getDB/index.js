@@ -41,7 +41,7 @@ exports.main = async (event, context) => {
     return cloud.database().collection(event.table).aggregate().sample({
       size: 5
     }).end()
-  }else {
+  }else { 
     return cloud.database().collection(event.table).get();
   }
 }

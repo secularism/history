@@ -10,5 +10,8 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "ui-sys": "mp-cu/colorUI/components/ui-sys/ui-sys"
+  }
 }

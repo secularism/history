@@ -9,13 +9,33 @@ Page({
    */
   data: {
     // swiper图片展示
+    swiperList: [{
+        img: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
+        time: '1921'
+      },
+      {
+        img: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg',
+        time: '1949'
+      },
+      {
+        img: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg',
+        time: '2021'
+      },
+    ],
+    textInfoIndex:0,
     img_index: [1, 2, 3, 4, 5, 6, 7, 8, 9],
     // tabBar默认主页活跃
     active: 0,
     // swiper默认当前序号
     currentSwiper: 0,
     show: false,
-    IsLogin:false
+    IsLogin: false
+  },
+  switchSwiper(e) {
+    let swiperIndex = e.detail.current//获取图片swiper的轮播内容的index
+    this.setData({
+      textInfoIndex: swiperIndex //将图片swiper的index跟文字swiper的current属性关联起来
+    })
   },
   // swiper切换
   /*
@@ -64,12 +84,12 @@ Page({
       url: '../toDetail/toDetail?currentSwiper=' + this.data.currentSwiper,
     })
   },
-  toDetail_time(){
+  toDetail_time() {
     // wx.navigateTo({
     //   url: '../toDetail/toDetail?currentSwiper=' + this.data.currentSwiper,
     // })
   },
-    /**
+  /**
    * 获取用户信息 
    */
   getUserProfile: function (e) {
@@ -156,7 +176,9 @@ Page({
       }
     })
   },
-  goQuestion(event){
-    console.log(event);
+  goQuestion(event) {
+    wx.navigateTo({
+      url: '../question/question',
+    })
   }
 })

@@ -1,25 +1,37 @@
 <view class="container" hidden="{{active === 0 ?false:true }}">
+  <view class="test"></view>
   <view class="con-swiper">
-    <swiper autoplay="true" circular="true" current="{{currentSwiper}}" bindchange="swiperChange" bindanimationfinish="animationChange">
-      <block wx:for="{{img_index}}" wx:key="index">
+    <swiper autoplay="true" previous-margin="300rpx" next-margin="300rpx" display-multiple-items='1' vertical="true" circular="true" interval="3000" duration="1000" bindchange="switchSwiper">
+      <block wx:for="{{swiperList}}" wx:key="index">
         <swiper-item>
-          <view class="swiper-img">
-            <image src="../../assets/img/index/{{index+1}}.jpg" bindtap="swiperClick"></image>
-          </view>
+          <block wx:if="{{index%2 == 0}}">
+            <view class="swiper-info">
+              <view class="swiper-time">
+                <text>{{item.time}}</text>
+              </view>
+              <view class="swiper-img">
+                <image mode="aspectFill" src="{{item.img}}" bindtap="privewShowImg" class="imageStyle" data-url="{{item}}"></image>
+              </view>
+            </view>
+          </block>
+          <block wx:else="{{index%2 == 1}}">
+            <view class="swiper-info">
+              <view class="swiper-img">
+                <image mode="aspectFill" src="{{item.img}}" bindtap="privewShowImg" class="imageStyle" data-url="{{item}}"></image>
+              </view>
+              <view class="swiper-time">
+                <text>{{item.time}}</text>
+              </view>
+
+            </view>
+          </block>
         </swiper-item>
       </block>
+
     </swiper>
+
+
   </view>
-  <van-popup closeable show="{{ show }}" round position="bottom" custom-style="height: 20%" bind:close="onClose">
-    <view class="view_popup">
-      <view>
-        <van-button class="btn_popup" hairline plain type="primary">时间线</van-button>
-      </view>
-      <view>
-        <van-button class="btn_popup" hairline plain type="primary" bindtap="toDetail_hero">人物线</van-button>
-      </view>
-    </view>
-  </van-popup>
   <image class="con-img" src="../../assets/img/bgc.jpg"></image>
 </view>
 

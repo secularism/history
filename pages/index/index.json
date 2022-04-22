@@ -7,6 +7,7 @@
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-image": "@vant/weapp/image/index",
     "van-button": "@vant/weapp/button/index",
-    "van-popup": "@vant/weapp/popup/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "ui-swiper": "/mp-cu/colorUI/components/ui-swiper/ui-swiper"
   }
 }

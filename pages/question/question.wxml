@@ -1,5 +1,5 @@
 <!--pages/question/question/question.wxml-->
-<view class="page container">
+<view class="page">
   <view>
     <view class="top">
       <view>{{currentId+1}}/5</view>
@@ -26,5 +26,5 @@
       </view>
     </view>
   </view>
-  <image class="con-img" src="../../assets/img/bgc.jpg"></image>
+  <!-- <image class="con-img" src="../../assets/img/bgc.jpg"></image> -->
 </view>
