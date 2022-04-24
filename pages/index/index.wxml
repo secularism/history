@@ -1,57 +1,18 @@
 <view class="container" hidden="{{active === 0 ?false:true }}">
-  <view class="test"></view>
-  <view class="con-swiper">
-    <swiper autoplay="true" previous-margin="300rpx" next-margin="300rpx" display-multiple-items='1' vertical="true" circular="true" interval="3000" duration="1000" bindchange="switchSwiper">
-      <block wx:for="{{swiperList}}" wx:key="index">
-        <swiper-item>
-          <block wx:if="{{index%2 == 0}}">
-            <view class="swiper-info">
-              <view class="swiper-time">
-                <text>{{item.time}}</text>
-              </view>
-              <view class="swiper-img">
-                <image mode="aspectFill" src="{{item.img}}" bindtap="privewShowImg" class="imageStyle" data-url="{{item}}"></image>
-              </view>
-            </view>
-          </block>
-          <block wx:else="{{index%2 == 1}}">
-            <view class="swiper-info">
-              <view class="swiper-img">
-                <image mode="aspectFill" src="{{item.img}}" bindtap="privewShowImg" class="imageStyle" data-url="{{item}}"></image>
-              </view>
-              <view class="swiper-time">
-                <text>{{item.time}}</text>
-              </view>
-
-            </view>
-          </block>
-        </swiper-item>
-      </block>
-
-    </swiper>
-
-
-  </view>
-  <image class="con-img" src="../../assets/img/bgc.jpg"></image>
+  <view class="time"></view>
+  <scroll-view scroll-y="true" 
+  style="height: 300rpx;"
+   bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="demo1" class="scroll-view-item demo-text-1"></view>
+    <view id="demo2" class="scroll-view-item demo-text-2"></view>
+    <view id="demo3" class="scroll-view-item demo-text-3"></view>
+  </scroll-view>
+  <image class="con-img" src="../../assets/img/图片1.png"></image>
 </view>
 
-<view hidden="{{active === 1 ?false:true }}" class="container">
-  <view class="question">
-    <view class="question_cat">
-      <view bindtap="goQuestion">
-        <text>人物类</text>
-      </view>
-      <view>
-        <text>朝代类</text>
-      </view>
-      <view>
-        <text>大乱斗</text>
-      </view>
-    </view>
-  </view>
-  <image class="con-img" src="../../assets/img/bgc.jpg"></image>
+<view hidden="{{active === 2 ?false:true }}">
+  456
 </view>
-
 <view hidden="{{active === 2 ?false:true }}">
   789
 </view>

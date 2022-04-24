@@ -13,58 +13,57 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.6;
 }
-
-.con-swiper {
-  width: 100%;
+.page-section-spacing{
+  margin-top: 60rpx;
+}
+.con-scroll{
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
-.con-swiper swiper{
-  flex: 1;  
+.scroll{
+  white-space: nowrap;
   height: 100%;
 }
-swiper-item{
-  align-items: center;
+.scroll .item{
+  position: relative;
+  padding: 0 8%;
+  min-height: 240rpx;
+  font-size:50rpx;
   display: flex;
+  flex-direction: column;
+  margin-top: 16rpx;
 }
-
-.swiper-info{
-  display: flex;
-  width: 95%;
-  margin: 0 auto;
-}
-
-.swiper-info view{
+.item-startime,
+.item-endtime{
   width: 50%;
-}
-.swiper-img{
-  font-size: 0;
   text-align: center;
+  height: 60rpx;
 }
-.swiper-time{
+.item-affair{
+  width: 90%;
+  margin: 20rpx auto;
   display: flex;
-  align-items: center;
 }
-.swiper-time text{
-  display: inline-block;
-  width: 100%;
-  font-weight: 400;
-  font-family: '宋体';
-  font-size: 40rpx;
+.item-affair>view{
+  width: 50%;
   text-align: center;
+  font-size: 38rpx;
 }
-.swiper-img image{
-  width: 85%;
-  padding: 0 16rpx;
+.item-name{
+  position: absolute;
+  height: 80rpx;
+  /* bottom: calc(50% - 40rpx); */
+  bottom: 138rpx;
+  font-size: 50rpx;
+  font-family: '宋体';
+  color: rgb(192, 0, 0);
 }
-.test{
+.time{
   width: 2px;
   height: 100%;
-  border-right: solid black 1px;
+  border-right: solid black 2px;
   position: absolute;
   left: calc(50% - 2px);
 }
